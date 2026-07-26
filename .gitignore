@@ -1,0 +1,22 @@
+# dependencias (se reinstalan con npm install)
+node_modules/
+
+# salida del build y tipos generados por Astro
+dist/
+.astro/
+
+# variables de entorno
+.env
+.env.*
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# sistema operativo y editores
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

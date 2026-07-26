@@ -1,0 +1,108 @@
+---
+import { Icon } from 'astro-icon/components'
+import { getTextos } from '../i18n/textos'
+
+const t = getTextos(Astro.currentLocale).skills
+
+const grupos = [
+  {
+    items: [
+      { n: 'C#', i: 'simple-icons:csharp' },
+      { n: 'PHP', i: 'simple-icons:php' },
+      { n: 'TypeScript', i: 'simple-icons:typescript' },
+      { n: 'Python', i: 'simple-icons:python' },
+    ],
+  },
+  {
+    items: [
+      { n: '.NET', i: 'simple-icons:dotnet' },
+      { n: 'Laravel', i: 'simple-icons:laravel' },
+      { n: 'Vue', i: 'simple-icons:vuedotjs' },
+      { n: 'Astro', i: 'simple-icons:astro' },
+    ],
+  },
+  {
+    items: [
+      { n: 'PostgreSQL', i: 'simple-icons:postgresql' },
+      { n: 'MySQL', i: 'simple-icons:mysql' },
+      { n: 'Redis', i: 'simple-icons:redis' },
+    ],
+  },
+  {
+    items: [
+      { n: 'Docker', i: 'simple-icons:docker' },
+      { n: 'Git', i: 'simple-icons:git' },
+      { n: 'GitHub Actions', i: 'simple-icons:githubactions' },
+      { n: 'Linux', i: 'simple-icons:linux' },
+    ],
+  },
+]
+---
+
+<section class="skills" id="skills">
+  <div class="container">
+    <h2 class="label">{t.titulo}</h2>
+    <div class="grupos">
+    {
+      grupos.map((g, i) => (
+        <div class="grupo">
+          <h3>{t.grupos[i]}</h3>
+          <ul>
+            {g.items.map((it) => (
+              <li>
+                <Icon name={it.i} />
+                <span>{it.n}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills {
+    background: var(--surface);
+    padding-block: var(--section-pad);
+  }
+  .label {
+    margin-bottom: 1.6rem;
+  }
+  .grupos {
+    display: grid;
+    gap: 1.7rem;
+  }
+  .grupo h3 {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: var(--bg);
+  }
+  li svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--muted);
+    flex: none;
+  }
+</style>

@@ -1,0 +1,30 @@
+---
+import { getTextos } from '../i18n/textos'
+
+const t = getTextos(Astro.currentLocale).nav
+---
+
+<a class="idioma mono" href={t.otraUrl} aria-label={t.otroIdiomaLabel}>{t.otroIdioma}</a>
+
+<style>
+  .idioma {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-inline: 0.7rem;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+  .idioma:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  @media (max-width: 760px) {
+    .idioma {
+      padding-inline: 0.45rem;
+      font-size: 0.78rem;
+    }
+  }
+</style>
