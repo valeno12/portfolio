@@ -96,8 +96,11 @@ export const textos = {
     },
     cierre: {
       titulo: 'Hablemos',
-      texto:
-        'Si tenés un proyecto en mente o estás buscando a alguien para tu equipo, escribime y lo vemos.',
+      disponible: {
+        titulo: 'Disponible para nuevos proyectos',
+        texto:
+          'Tomo proyectos freelance y escucho propuestas. Si necesitás construir algo desde cero, sumarle funcionalidades a un sistema que ya está andando, o buscás a alguien para tu equipo, escribime y lo charlamos.',
+      },
       canales: [
         { n: 'Email', d: 'vvalentinogm@gmail.com', i: 'lucide:mail', u: 'mailto:vvalentinogm@gmail.com' },
         { n: 'LinkedIn', d: 'Mi perfil profesional', i: 'lucide:linkedin', u: 'https://linkedin.com/in/valentinogm' },
@@ -218,8 +221,11 @@ export const textos = {
     },
     cierre: {
       titulo: "Let's talk",
-      texto:
-        "If you have a project in mind or you're looking for someone to join your team, drop me a line.",
+      disponible: {
+        titulo: 'Available for new projects',
+        texto:
+          "I take on freelance projects and I'm open to hearing what you have in mind. If you need something built from scratch, new features on a system that's already running, or someone to join your team, drop me a line.",
+      },
       canales: [
         { n: 'Email', d: 'vvalentinogm@gmail.com', i: 'lucide:mail', u: 'mailto:vvalentinogm@gmail.com' },
         { n: 'LinkedIn', d: 'My professional profile', i: 'lucide:linkedin', u: 'https://linkedin.com/in/valentinogm' },

@@ -56,7 +56,6 @@ const proyectos = (await getCollection('proyectos')).sort((a, b) => a.data.orden
 
   <section class="cierre container" id="contacto">
     <h2>{t.cierre.titulo}</h2>
-    <p class="bajada">{t.cierre.texto}</p>
     <div class="canales">
       {
         t.cierre.canales.map((c) => (
@@ -72,6 +71,13 @@ const proyectos = (await getCollection('proyectos')).sort((a, b) => a.data.orden
           </a>
         ))
       }
+    </div>
+        <div class="disponible">
+      <Icon name="lucide:send" />
+      <div>
+        <p class="dtitulo">{t.cierre.disponible.titulo}</p>
+        <p class="dtexto">{t.cierre.disponible.texto}</p>
+      </div>
     </div>
   </section>
 </main>
@@ -126,16 +132,37 @@ const proyectos = (await getCollection('proyectos')).sort((a, b) => a.data.orden
   .cierre {
     padding-block: var(--section-pad);
   }
-  .bajada {
+  .disponible {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.1rem;
+    align-items: start;
+    margin-top: 1.6rem;
+    padding: 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+  .disponible svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    color: var(--accent);
+    margin-top: 0.15rem;
+  }
+  .dtitulo {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .dtexto {
     color: var(--muted);
-    max-width: 48ch;
-    margin-top: 0.9rem;
+    font-size: 0.95rem;
+    max-width: 68ch;
   }
   .canales {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 1rem;
-    margin-top: 2.2rem;
+    margin-top: 1.6rem;
   }
   .canal {
     display: grid;
