@@ -125,6 +125,12 @@ export const textos = {
           i: "lucide:github",
           u: "https://github.com/valeno12",
         },
+        {
+          n: "CV",
+          d: "Descargar en PDF",
+          i: "lucide:file-text",
+          u: "/CV-Valentino-Garcia-Mendez.pdf",
+        },
       ],
     },
     nav: {
@@ -264,6 +270,12 @@ export const textos = {
           d: "All my code",
           i: "lucide:github",
           u: "https://github.com/valeno12",
+        },
+        {
+          n: "CV",
+          d: "Download PDF (in Spanish)",
+          i: "lucide:file-text",
+          u: "/CV-Valentino-Garcia-Mendez.pdf",
         },
       ],
     },
